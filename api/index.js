@@ -1,10 +1,10 @@
 import { withAuth, withoutAuth } from './_lib/adapter.js';
 import * as authController from '../backend/controllers/authController.js';
-import * as habitController from '../backend/controllers/habitController.js';
-import * as habitLogController from '../backend/controllers/habitLogController.js';
-import * as taskController from '../backend/controllers/taskController.js';
-import * as taskLogController from '../backend/controllers/taskLogController.js';
-import * as categoryController from '../backend/controllers/categoryController.js';
+import * as habitController from '../backend/controllers/habitsController.js';
+import * as habitLogController from '../backend/controllers/habitLogsController.js';
+import * as taskController from '../backend/controllers/tasksController.js';
+import * as taskLogController from '../backend/controllers/taskLogsController.js';
+import * as categoryController from '../backend/controllers/categoriesController.js';
 
 export default async function handler(req, res) {
   const url = req.url.replace(/^\/api/, '');
