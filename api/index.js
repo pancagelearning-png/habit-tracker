@@ -7,7 +7,7 @@ import * as taskLogController from '../backend/controllers/taskLogsController.js
 import * as categoryController from '../backend/controllers/categoriesController.js';
 
 export default async function handler(req, res) {
-  const url = req.url.replace(/^\/api/, '');
+  const url = new URL(req.url, 'http://x').pathname.replace(/^\/api/, '');
   const method = req.method;
 
   // Auth routes
